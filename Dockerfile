@@ -1,5 +1,6 @@
 FROM alpine:latest
 
+# environment variables
 ENV BUILD_PACKAGES="build-base openssl" \
     PACKAGES="tor sudo bash git haproxy privoxy npm procps"
 
