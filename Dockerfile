@@ -16,8 +16,8 @@ RUN \
 
 # install polipo
 RUN \
-	wget https://github.com/jech/polipo/archive/master.zip -O polipo.zip && \
-	unzip polipo.zip && \
+  wget https://github.com/jech/polipo/archive/master.zip -O polipo.zip && \
+  unzip polipo.zip && \
   cd polipo-master && \
   make && \
   install polipo /usr/local/bin/ && \
@@ -30,9 +30,10 @@ RUN \
   apk del $BUILD_PACKAGES
 
 # install multitor
-RUN	git clone https://github.com/trimstray/multitor && \
-	cd multitor && \
-	./setup.sh install && \
+RUN \
+  git clone https://github.com/trimstray/multitor && \
+  cd multitor && \
+  ./setup.sh install && \
 # create log folders
   mkdir -p /var/log/multitor/privoxy/ && \
   mkdir -p /var/log/polipo/ && \
